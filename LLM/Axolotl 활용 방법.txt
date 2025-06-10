@@ -1,0 +1,23 @@
+Axolotl 활용 방법
+
+
+Github Link : https://github.com/axolotl-ai-cloud/axolotl
+
+datasets.json 포맷 : examples/사용하고자 하는 모델
+Tunning.yaml 포맷 : examples/특정모델 -> datasets path에 적힌 HuggingFace 참조
+
+
+### 1. 필요한 패키지 설치
+sudo apt update
+sudo apt install git -y
+
+### 2. Axolotl GitHub에서 clone
+git clone https://github.com/OpenAccess-AI-Collective/axolotl.git
+cd axolotl
+
+ ### 3. (가상환경 활성화 확인 후) 설치
+# 가상환경이 이미 활성화된 상태라면
+pip install -e .
+
+### 4. 학습 실행
+python3 -m axolotl.cli.train ".yaml 파일"
